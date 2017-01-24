@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg_blur"
+    tools:context="com.fira.gappza.SettingsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/header_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header">
+
+
+
+        <TextView
+            android:id="@+id/hello_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Account:"
+            android:textColor="@color/background_floating_material_light"
+            android:paddingTop="10dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/email_textView_settingsActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="email"
+            android:textColor="@color/background_floating_material_light"
+            android:paddingBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/hello_text"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/changePassword_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change password"
+        android:layout_below="@+id/fingerPrint_layout"
+        android:textAllCaps="false"
+        android:background="@drawable/button2"
+        android:textColor="#fbf9f9"
+        android:textSize="18dp"
+        android:layout_margin="16dp"
+        />
+
+    <Button
+        android:id="@+id/deleteAccount_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete account"
+        android:layout_below="@+id/changePassword_button"
+        android:textAllCaps="false"
+        android:background="@drawable/button2"
+        android:textColor="#fbf9f9"
+        android:textSize="18dp"
+        android:layout_margin="16dp"
+        />
+
+    <Button
+        android:id="@+id/logOut_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        android:layout_below="@+id/deleteAccount_button"
+        android:textAllCaps="false"
+        android:background="@drawable/button2"
+        android:textColor="#fbf9f9"
+        android:textSize="18dp"
+        android:layout_margin="16dp"
+        />
+
+    <TextView
+        android:layout_above="@+id/tabBar_settingsActivity"
+        android:paddingLeft="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFFFF"
+        android:paddingBottom="16dp"
+        android:text="Contact info: gappza.info@gmail.com"/>
+
+    <LinearLayout
+        android:id="@+id/tabBar_settingsActivity"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?attr/colorButtonNormal"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="5dp">
+
+            <ImageButton
+                android:id="@+id/account_imageButton_settingsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/account"
+                android:background="@android:color/transparent"
+                android:layout_centerHorizontal="true"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:layout_below="@+id/account_imageButton_settingsActivity"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorAccent" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="5dp">
+
+            <ImageButton
+                android:id="@+id/settings_imageButton_settingsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/settings_selected"
+                android:background="@android:color/transparent"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:layout_below="@+id/settings_imageButton_settingsActivity"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_progressBar_settingsActivity"
+        style='style="?android:attr/progressBarStyleHorizontal"'
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/fingerPrint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/header_settings"
+        android:layout_alignStart="@+id/changePassword_button">
+    </LinearLayout>
+
+
+</RelativeLayout>

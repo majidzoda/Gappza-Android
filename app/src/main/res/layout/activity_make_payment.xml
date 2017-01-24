@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_make_payment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.fira.gappza.MakePaymentActivity"
+    android:focusableInTouchMode="true"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:id="@+id/header_makePayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header"
+        >
+
+        <Button
+            android:id="@+id/backFromMakePaymentActivitytoAccountActivity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="@color/background_floating_material_light"
+            android:drawableLeft="@drawable/back"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="New payment"
+            android:textColor="@color/background_floating_material_light"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_makePayment"
+        android:clickable="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/card_textView_makePaymentActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFC0303"
+                />
+
+            <com.devmarvel.creditcardentry.library.CreditCardForm
+                android:id="@+id/credit_card_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:helper_text_color="#f12"
+                app:include_helper="false"
+                app:include_zip="false"
+                android:layout_below="@id/card_textView_makePaymentActivity"
+                android:background="@drawable/edit_text_style"/>
+
+
+
+            <NumberPicker
+                android:id="@+id/provier_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/credit_card_form"
+                />
+
+            <TextView
+                android:id="@+id/phoneNumberError_textView_makePaymentActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFC0303"
+                android:layout_below="@+id/provier_picker"
+                />
+
+            <EditText
+                android:layout_below="@+id/phoneNumberError_textView_makePaymentActivity"
+                android:id="@+id/phoneNumber_editText_makePaymentActivity"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:ems="10"
+                android:hint="number"
+                android:background="@drawable/edit_text_style"
+                android:layout_marginRight="5dp"
+              />
+
+            <TextView
+                android:id="@+id/amountError_textView_makePaymentActivity"
+                android:layout_below="@+id/phoneNumber_editText_makePaymentActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFC0303"
+                />
+
+            <EditText
+                android:layout_below="@+id/amountError_textView_makePaymentActivity"
+                android:id="@+id/amount_editText_makePaymentActivity"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:ems="10"
+                android:hint="amount"
+                android:background="@drawable/edit_text_style"
+                android:layout_marginRight="5dp" />
+
+            <TextView
+                android:id="@+id/feeLabel_textView_makePaymentActivity"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/amount_editText_makePaymentActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFC0303"
+                />
+
+
+
+            <ScrollView
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:id="@+id/conditionText_scrollView_makePaymentActivity"
+                android:layout_below="@+id/feeLabel_textView_makePaymentActivity"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/edit_text_style"
+                android:clickable="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="By clicking on &quot;I agree to terms and conditions&quot; you as a &quot;GAPPZA&quot; USER will agree on the followings:\n\n
+
+-GAPPZA will add 2.9% out of amount you entered and $0.30 for credit card transaction fee and $2 application fee.\n\n
+
+-GAPPZA will convert the amount you entered from USD to TJS based on latest exchange rate of NBT(&quot;National Bank of Tajikistan&quot;) and credit it to your account to your indicated provider.\n\n
+
+-The only time your payment will be refunded when you entered invalid phone number.\n\n
+
+ -Any other complete payments are final.\n\n
+
+-GAPPZA will not collect or share your credit/debit card information and secure your confidentiality." />
+            </ScrollView>
+
+            <CheckBox
+                android:paddingBottom="16dp"
+                android:id="@+id/termsAndConditions_checkbox_makePaymentActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I agree to the terms and conditions"
+                android:buttonTint="#ffffff"
+                android:layout_below= "@+id/conditionText_scrollView_makePaymentActivity"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/transparent"
+                android:button="@android:color/transparent"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/checkbox_unchecked"
+                android:paddingTop="5dp"/>
+
+            <Button
+                android:id="@+id/submitButton_makePaymentActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/logo_imageView"
+                android:layout_alignRight="@+id/logo_imageView"
+                android:text="Submit"
+                android:layout_below="@+id/termsAndConditions_checkbox_makePaymentActivity"
+                android:textAllCaps="false"
+                android:background="@drawable/button_disabled"
+                android:textColor="#fbf9f9"
+                android:textSize="18dp" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/loading_progressBar_makePaymentActivity"
+        style='style="?android:attr/progressBarStyleHorizontal"'
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

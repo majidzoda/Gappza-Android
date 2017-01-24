@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="16dp"
+    tools:context="com.fira.gappza.PrivacyPolicyActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_privacyPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header">
+
+        <Button
+            android:id="@+id/backFromPrivacyPolicyActivityToSignUpActivity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="@color/background_floating_material_light"
+            android:drawableLeft="@drawable/back"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Signing up"
+            android:textColor="@color/background_floating_material_light"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/termsAndConditions_scrollView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/header_privacyPolicy"
+        android:padding="16dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:text="GAPPZA does not sell, rent, loan, trade, lease or otherwise transfer any personal information collected through email, our website, or our service, to any third party. All communication between GAPPZA staff and our users is treated a strictly confidential. Once you have opened a GAPPZA account we encourage you to complete your full contact information. This information may be required to purchase phone credits from vendor networks. At any time, a law enforcement agency may contact us requesting the user information for a purchased phone credit, and we may be obliged to forward these details."
+            />
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.fira.gappza.AccountActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_Account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header">
+
+
+
+        <TextView
+            android:id="@+id/hello_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Hello"
+            android:textColor="@color/background_floating_material_light"
+            android:paddingTop="10dp"
+
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/accountFirstName_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:textColor="@color/background_floating_material_light"
+            android:paddingBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/hello_text"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/makePayment_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make a payment"
+        android:layout_below="@+id/header_Account"
+        android:textAllCaps="false"
+        android:background="@drawable/button_enabled"
+        android:textColor="#fbf9f9"
+        android:textSize="18dp"
+        android:layout_margin="16dp"
+        />
+
+    <LinearLayout
+        android:layout_below="@+id/makePayment_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:id="@+id/fragment_containerOutter"
+            android:layout_weight="1">
+
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="?attr/colorButtonNormal"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="5dp">
+
+                <ImageButton
+                    android:id="@+id/accountSelected_imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/account_selected"
+                    android:background="@android:color/transparent"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="false" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account"
+                    android:layout_below="@+id/accountSelected_imageButton"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimary" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="5dp">
+
+                <ImageButton
+                    android:id="@+id/settings_imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/settings"
+                    android:background="@android:color/transparent"
+                    android:layout_centerHorizontal="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:layout_below="@+id/settings_imageButton"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorAccent" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
